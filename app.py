@@ -10,7 +10,7 @@ train = pd.read_csv('processed_train.csv')
 
 @app.route('/')
 def hello():
-    html = f"Predict whether a tweet is fake or real"
+    html = "Predict whether a tweet is fake or real"
     return html.format(format)
 
 @app.route('/predict', methods=['POST'])
