@@ -17,6 +17,9 @@ def hello():
 def predict():
     input_data = model.read_input(request.json)
     pred = model.predict_label(input_data)
-    json = jsonify({'0':list(pred[:, 0]), '1':list(pred[:,1])})
+    json = jsonify({'0':list(pred[0, :]), '1':list(pred[1,:])})
     print(json.json)
     return "Done" 
+
+if __name__ == '__main__':
+    app.run(debug=True, host='0.0.0.0', port=9696)

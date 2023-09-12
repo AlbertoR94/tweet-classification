@@ -4,7 +4,7 @@ import numpy as np
 
 import model
 
-url =  "http://localhost:5000/predict"
+url =  "http://localhost:9696/predict"
 
 input_data = {
             'keyword':{"0":None, "1":"ablaze"},
