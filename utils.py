@@ -288,3 +288,8 @@ def remove_cols(X, cols_to_remove):
 
 def keep_col(X, col):
     return X[col]
+
+
+def generate_dictionary(preds):
+    results = [{'id': key, 'prediction':value[1]} for key, value in enumerate(preds)]
+    return results
