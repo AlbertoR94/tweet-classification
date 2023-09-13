@@ -8,6 +8,8 @@ COPY ["requirements.txt", "Makefile", "processed_train.csv", "./"]
 RUN pip install --upgrade pip &&\
 	pip install --no-cache-dir -r requirements.txt
 
+RUN [ "python", "-c", "import nltk; nltk.download('')" ]
+
 COPY ["*.py", "model.joblib", "pipeline.joblib", "./"]
 
 EXPOSE 9696
